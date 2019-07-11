@@ -1,17 +1,32 @@
 using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
-namespace FunctionApp2
+namespace ConsoleApp3
 {
-    static void Main(string[] arg)
+    class Program
     {
 
+        static void Main(string[] args)
+        {
+            double l, w, h, perimeter, area, volume;
+
+            Console.WriteLine("perimeter area and voulme measuremnts");
+            Console.WriteLine("Enter length ");
+            l = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter width ");
+            w = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Height ");
+            h = double.Parse(Console.ReadLine());
+
+            perimeter = 2 * l + 2 * w;
+            area = l * w;
+            volume = l * w * h;
+
+            Console.WriteLine("perimeter in feet is {0}", perimeter);
+            Console.WriteLine("area in square feet is {0}", area);
+            Console.WriteLine("volume in cubic feet is {0}", volume);
+
+        }
     }
 }
